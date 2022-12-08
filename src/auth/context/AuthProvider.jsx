@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState({})
 	
 	const leerUsuario = JSON.parse(localStorage.getItem('user'))
-	console.log("ESTOY LEYENDO EL LOCALSTORAGE", leerUsuario)
+
 	
 
 	

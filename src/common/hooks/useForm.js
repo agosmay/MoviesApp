@@ -1,6 +1,6 @@
 import React , { useState , useContext } from 'react';
 import { loginForm } from './loginForm'
-import { AuthContext } from '../context/AuthContext'
+import { AuthContext } from '../../auth/context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 
 export const useForm = () => {

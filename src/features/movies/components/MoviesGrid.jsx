@@ -1,10 +1,10 @@
 import React , { useContext } from 'react';
 import './stylesheets/DisplayMovies.css'
-import { AuthContext } from '../context/AuthContext'
+import { AuthContext } from '../../../auth/context/AuthContext'
 import { Link , useNavigate } from 'react-router-dom';
 import { DisplayMovies } from './DisplayMovies';
-import { useFetch } from '../hooks/useFetch';
-import { serviceGetPopularMovies } from './services/serviceGetPopularMovies';
+import { useFetch } from '../../../common/hooks/useFetch';
+import { serviceGetPopularMovies } from '../service/serviceGetPopularMovies';
 
 export const MoviesGrid = () => {
 	
@@ -58,4 +58,5 @@ export const MoviesGrid = () => {
 
 
 }
+
 

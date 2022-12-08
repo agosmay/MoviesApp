@@ -1,4 +1,4 @@
-import { TMDB } from '../../config/tmdb'
+import { TMDB } from '../../../config/tmdb'
 export const moviesAdapter = (movies)=> {
 	
 	

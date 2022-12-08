@@ -1,12 +1,12 @@
 import React from 'react';
-import { Login } from '../components/Login';
-import { MoviesGrid } from '../components/MoviesGrid';
-import { SeriesGrid } from '../components/SeriesGrid';
+import { Login } from '../auth/components/Login';
+import { MoviesGrid } from '../features/movies/components/MoviesGrid';
+import { SeriesGrid } from '../features/series/components/SeriesGrid';
 import { BrowserRouter , Routes , Route } from 'react-router-dom';
 import { ProtectedRoute } from './ProtectedRoute';
 import { PublicRoute } from './PublicRoute';
-import { PageNotFound } from '../components/PageNotFound';
-import { Layout } from './Layout'
+import { PageNotFound } from '../common/components/PageNotFound';
+import { Layout } from '../common/components/Layout'
 
 
 export const AppRoutes = () => {

@@ -1,5 +1,5 @@
 
-import { TMDB } from '../../config/tmdb';
+import { TMDB } from '../../../config/tmdb';
 
 import { moviesAdapter } from '../adapter/moviesAdapter'
 
