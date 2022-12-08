@@ -8,7 +8,7 @@ export const useForm = () => {
 		
 	const [input, setInput] = useState(loginForm)
 	
-	const { email , password } = input;
+	const { username , password } = input;
 	
 	const { isAuth, setIsAuth, setUser , user } = useContext(AuthContext)
 	
@@ -30,7 +30,7 @@ export const useForm = () => {
 		const userLogged = {
 			id: Date.now(),
 			token: "1234",
-			email: email,
+			username: username,
 			password : password
 		}
 	
@@ -52,7 +52,7 @@ export const useForm = () => {
 		
 	}
 	
-	return  { handleChange, handleSubmit , email , password , user , setUser }
+	return  { handleChange, handleSubmit , username , password , user , setUser }
 
 
 

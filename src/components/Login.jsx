@@ -4,7 +4,7 @@ import './stylesheets/Login.css'
 
 export const Login = ()=> {
 
-	const  {  handleChange, handleSubmit , email, password , user , setUser } = useForm();
+	const  {  handleChange, handleSubmit , username, password , user , setUser } = useForm();
 	
 
 	
@@ -15,10 +15,10 @@ export const Login = ()=> {
 		
 			<div className="contenedorLogin">
 				<p className="tituloLogin">Sign in with your account</p>
-				<form onSubmit={handleSubmit}>
+				<form onSubmit={handleSubmit} autoComplete="off">
 					<div className="contenedorInput">
-						<label htmlFor="email" className="labelStyle">Email Adress</label>
-						<input type="email" id="email" className="inputStyle" name="email" onChange={handleChange} value={email} required/>
+						<label htmlFor="username" className="labelStyle">Username</label>
+						<input type="text" id="username" className="inputStyle" name="username" onChange={handleChange} value={username} required/>
 					</div>
 					<div className="contenedorInput">
 						<label htmlFor="password">Password</label>

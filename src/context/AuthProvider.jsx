@@ -5,7 +5,9 @@ export const AuthProvider = ({ children }) => {
 	const [isAuth, setIsAuth] = useState(false)
 	const [user, setUser] = useState({})
 	
-	const leerUsuario = localStorage.getItem('user')
+	const leerUsuario = JSON.parse(localStorage.getItem('user'))
+	console.log("ESTOY LEYENDO EL LOCALSTORAGE", leerUsuario)
+	
 
 	
 	return (
@@ -15,7 +17,8 @@ export const AuthProvider = ({ children }) => {
 				setIsAuth,
 				user,
 				setUser,
-				leerUsuario
+				leerUsuario,
+				
 				
 			}}>
 			{children}

@@ -1,5 +1,5 @@
 export const loginForm = {
 		
-		email:"",
+		username:"",
 		password:""
 	}
