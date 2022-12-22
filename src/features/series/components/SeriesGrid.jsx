@@ -1,4 +1,4 @@
-import React , { useContext } from 'react';
+import React , { useContext , useState } from 'react';
 import './stylesheets/DisplaySeries.css'
 import { AuthContext } from '../../../auth/context/AuthContext'
 import { Link , useNavigate } from 'react-router-dom';
@@ -26,6 +26,22 @@ export const SeriesGrid = () => {
 	const { data, isLoading , error } = useFetch(serviceGetPopularSeries);
 	
 	
+	const [counter, setCounter]= useState(1)
+	
+	const atras = ()=> {
+		if(counter<=1){
+			setCounter(1)
+		}else{
+			setCounter(counter-1)
+		}
+	}
+	
+	
+	const siguiente = () => {
+		setCounter(counter +1)
+		
+	}
+	
 	
 	
 	return(
@@ -35,6 +51,7 @@ export const SeriesGrid = () => {
 			<Link to="/movies">Ir a Movies</Link>
 			<button onClick={logout}>Log Out</button>			
 			<h1 className="title">SERIES</h1>
+			<button type="button" onClick={atras}>Atras</button><span>{counter}</span><button type="button" onClick={siguiente}>SIGUIENTE</button>
 			<ul className="grid-container">
 			{
 				data.map(serie=> (
@@ -62,4 +79,6 @@ export const SeriesGrid = () => {
 
 
 }
+
+
 

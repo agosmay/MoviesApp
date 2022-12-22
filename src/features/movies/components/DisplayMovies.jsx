@@ -9,6 +9,7 @@ export const DisplayMovies= ( { title , poster , overview } ) => {
 					<img src={poster} alt={title} />
 					<p className="movieOverview">{overview}</p>
 					<button className="buttonPlay" onClick={()=> alert(`Watch Movie ${title}`)}>Play</button>
+					
 				</li>
 		</>
 		
