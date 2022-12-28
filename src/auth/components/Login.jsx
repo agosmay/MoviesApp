@@ -15,7 +15,7 @@ export const Login = ()=> {
 		<>	
 			<div className="container-app-description">
 				<h1 className="first-title">Welcome to the Rating App!</h1>
-				<h1 className="title-description">Check out your favourite movies and tv shows !</h1>
+				<h1 className="title-description">Check out your favourite movies and tv shows!</h1>
 			</div>
 			<div className="container-icons">
 				<h1 className="icon"><RiStarSFill /></h1>
