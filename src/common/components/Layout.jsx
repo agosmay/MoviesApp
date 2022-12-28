@@ -38,9 +38,9 @@ export const Layout = ({children})=> {
 					<li>Made with love <BsSuitHeart/></li>
 					<li>Made with React <FaReact /></li>
 					<div className="icon-container">
-						<li><a href="https://www.facebook.com/"><h3><AiOutlineFacebook /></h3></a></li>
-						<li><a href="https://www.instagram.com/"><h3><AiOutlineInstagram /></h3></a></li>
-						<li><a href="https://www.youtube.com/"><h3><BsFillPlayBtnFill/></h3></a></li>
+						<li className="icon-item"><a href="https://www.facebook.com/"><h3><AiOutlineFacebook /></h3></a></li>
+						<li className="icon-item"><a href="https://www.instagram.com/"><h3><AiOutlineInstagram /></h3></a></li>
+						<li className="icon-item"><a href="https://www.youtube.com/"><h3><BsFillPlayBtnFill/></h3></a></li>
 					</div>
 				</ul>
 			</footer>

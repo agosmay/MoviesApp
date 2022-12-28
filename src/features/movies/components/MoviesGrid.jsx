@@ -47,6 +47,7 @@ export const MoviesGrid = () => {
 			
 				setDatos(res.data.results)
 				
+				
 			
 			
 	
@@ -75,7 +76,7 @@ export const MoviesGrid = () => {
 		<>
 			
 			<h1 className="title">MOVIES</h1>
-			<div className="link-container"><Link to="/series" className="link">Go to Series <BsDisplay/></Link></div>
+			<div className="link-container"><button className="btn-link" type="button"><Link to="/series" className="link">Go to Series <BsDisplay/></Link></button></div>
 			<div className="btn-container">
 				<button type="button" onClick={atras} className="btn"><AiOutlineArrowLeft /></button><button type="button" onClick={siguiente} className="btn"><AiOutlineArrowRight /></button>
 			</div>
@@ -88,6 +89,7 @@ export const MoviesGrid = () => {
 						title={movie.title}
 						poster={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
 						overview={movie.overview}
+						vote_average={movie.vote_average}
 						
 						
 						
@@ -100,7 +102,7 @@ export const MoviesGrid = () => {
 			<div className="btn-container">
 				<button type="button" onClick={atras} className="btn"><AiOutlineArrowLeft /></button><button type="button" onClick={siguiente} className="btn"><AiOutlineArrowRight /></button>
 			</div>
-			<div className="link-container"><Link to="/series" className="link">Go to Series <BsDisplay/></Link></div>
+			<div className="link-container"><button className="btn-link" type="button"><Link to="/series" className="link">Go to Series <BsDisplay/></Link></button></div>
 			
 			
 		</>

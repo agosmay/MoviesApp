@@ -73,7 +73,7 @@ export const SeriesGrid = () => {
 			
 					
 			<h1 className="title">SERIES</h1>
-			<div className="link-container"><Link to="/movies" className="link">Go to Movies <BiCameraMovie/></Link></div>
+			<div className="link-container"><button className="btn-link" type="button"><Link to="/movies" className="link">Go to Movies <BiCameraMovie/></Link></button></div>
 			<div className="btn-container">
 				<button type="button" onClick={atras} className="btn"><AiOutlineArrowLeft /></button><button type="button" onClick={siguiente} className="btn"><AiOutlineArrowRight /></button>
 			</div>
@@ -83,9 +83,11 @@ export const SeriesGrid = () => {
 					<DisplaySeries
 						key={serie.id}
 						id={serie.id}
-						title={serie.title}
+						title={serie.name}
 						poster={`https://image.tmdb.org/t/p/w300/${serie.poster_path}`}
 						overview={serie.overview}
+						vote_average={serie.vote_average}
+
 						
 						
 						
@@ -98,7 +100,7 @@ export const SeriesGrid = () => {
 			<div className="btn-container">
 				<button type="button" onClick={atras} className="btn"><AiOutlineArrowLeft /></button><button type="button" onClick={siguiente} className="btn"><AiOutlineArrowRight /></button>
 			</div>
-			<div className="link-container"><Link to="/movies" className="link">Go to Movies <BiCameraMovie/></Link></div>
+			<div className="link-container"><button className="btn-link" type="button"><Link to="/movies" className="link">Go to Movies <BiCameraMovie/></Link></button></div>
 			
 			
 		</>

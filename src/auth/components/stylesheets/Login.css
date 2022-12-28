@@ -54,3 +54,24 @@
 .buttonSignIn:hover{
 	background-color: purple;
 }
+
+.first-title, 
+.title-description
+ {
+	width: 100%;
+	text-align: center;
+	color: white;
+	margin:30px auto;
+	
+}
+
+.icon {
+	color: yellow;
+	
+}
+
+.container-icons {
+	display: flex;
+	justify-content: center;
+}
+
