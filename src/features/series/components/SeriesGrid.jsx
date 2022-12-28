@@ -6,20 +6,14 @@ import { Link , useNavigate } from 'react-router-dom';
 import { DisplaySeries } from './DisplaySeries';
 import axios from 'axios';
 import { ENV } from '../../../environment/environment'
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import { BiCameraMovie } from 'react-icons/bi';
 
 export const SeriesGrid = () => {
 	
 	const { isAuth , user , leerUsuario } = useContext(AuthContext)
 	
-
-   	const navigate = useNavigate();
-
-	const logout = () => {
-		
-		localStorage.removeItem("user");
-		navigate("/login") 
-		
-	}
 	
 	
 	const [datos, setDatos] = useState([])
@@ -51,9 +45,6 @@ export const SeriesGrid = () => {
 			const res = await axios(`https://api.themoviedb.org/3/tv/popular?api_key=${ENV.API_KEY}&page=${counter}`)
 			
 				setDatos(res.data.results)
-				
-				console.log(res)
-				console.log(counter)
 			
 	
 			
@@ -79,11 +70,13 @@ export const SeriesGrid = () => {
 	
 	return(
 		<>
-			<h1>{`Bienvenido ${leerUsuario.username}`}</h1>
-			<Link to="/movies">Ir a Movies</Link>
-			<button onClick={logout}>Log Out</button>			
-			<h1 className="title">MOVIES</h1>
-			<button type="button" onClick={atras}>Atras</button><span>{counter}</span><button type="button" onClick={siguiente}>SIGUIENTE</button>
+			
+					
+			<h1 className="title">SERIES</h1>
+			<div className="link-container"><Link to="/movies" className="link">Go to Movies <BiCameraMovie/></Link></div>
+			<div className="btn-container">
+				<button type="button" onClick={atras} className="btn"><AiOutlineArrowLeft /></button><button type="button" onClick={siguiente} className="btn"><AiOutlineArrowRight /></button>
+			</div>
 			<ul className="grid-container">
 			{
 				datos.map(serie=> (
@@ -102,6 +95,10 @@ export const SeriesGrid = () => {
 				
 			}
 			</ul>
+			<div className="btn-container">
+				<button type="button" onClick={atras} className="btn"><AiOutlineArrowLeft /></button><button type="button" onClick={siguiente} className="btn"><AiOutlineArrowRight /></button>
+			</div>
+			<div className="link-container"><Link to="/movies" className="link">Go to Movies <BiCameraMovie/></Link></div>
 			
 			
 		</>

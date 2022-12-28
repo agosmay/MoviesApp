@@ -1,24 +1,20 @@
 import React , { useContext , useState , useEffect } from 'react';
 import './stylesheets/DisplayMovies.css'
 import { AuthContext } from '../../../auth/context/AuthContext'
-import { Link , useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { DisplayMovies } from './DisplayMovies';
 import axios from 'axios';
 import { ENV } from '../../../environment/environment'
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import { BsDisplay } from 'react-icons/bs';
 
 export const MoviesGrid = () => {
 	
 	const { isAuth , user , leerUsuario } = useContext(AuthContext)
 	
 
-   	const navigate = useNavigate();
-
-	const logout = () => {
-		
-		localStorage.removeItem("user");
-		navigate("/login") 
-		
-	}
+   
 	
 	
 	const [datos, setDatos] = useState([])
@@ -51,8 +47,7 @@ export const MoviesGrid = () => {
 			
 				setDatos(res.data.results)
 				
-				console.log(res)
-				console.log(counter)
+			
 			
 	
 			
@@ -78,11 +73,12 @@ export const MoviesGrid = () => {
 	
 	return(
 		<>
-			<h1>{`Bienvenido ${leerUsuario.username}`}</h1>
-			<Link to="/series">Ir a Series</Link>
-			<button onClick={logout}>Log Out</button>			
+			
 			<h1 className="title">MOVIES</h1>
-			<button type="button" onClick={atras}>Atras</button><span>{counter}</span><button type="button" onClick={siguiente}>SIGUIENTE</button>
+			<div className="link-container"><Link to="/series" className="link">Go to Series <BsDisplay/></Link></div>
+			<div className="btn-container">
+				<button type="button" onClick={atras} className="btn"><AiOutlineArrowLeft /></button><button type="button" onClick={siguiente} className="btn"><AiOutlineArrowRight /></button>
+			</div>
 			<ul className="grid-container">
 			{
 				datos.map(movie=> (
@@ -101,6 +97,10 @@ export const MoviesGrid = () => {
 				
 			}
 			</ul>
+			<div className="btn-container">
+				<button type="button" onClick={atras} className="btn"><AiOutlineArrowLeft /></button><button type="button" onClick={siguiente} className="btn"><AiOutlineArrowRight /></button>
+			</div>
+			<div className="link-container"><Link to="/series" className="link">Go to Series <BsDisplay/></Link></div>
 			
 			
 		</>

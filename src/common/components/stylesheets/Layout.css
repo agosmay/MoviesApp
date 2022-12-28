@@ -1,0 +1,67 @@
+.header-container,
+.footer-container
+ {
+	
+	background-color: white;
+	font-size: 2.2rem;
+	height: 50px;
+	
+	
+ }
+
+ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+
+	
+}
+
+
+ul li {
+	
+	text-decoration: none;
+	list-style: none;
+	
+}
+
+.logOut-btn {
+	width: 100px;
+	height: 30px;
+	font-size: 1.5rem;
+	background-color: white;
+	font-family: 'Poor Story', cursive;
+	cursor: pointer;
+	border-radius: 12px;
+	
+	
+}
+
+.user {
+	font-family: 'Poor Story', cursive;
+	color: white;
+	font-size: 2rem;
+}
+
+.logOut-btn:hover {
+	background-color: #A5EEF0;
+	
+}
+
+.footer-ul {
+	background-color: #A5EEF0;
+	font-family: 'Poor Story', cursive;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	padding: 10px;
+	
+}
+
+.icon-container {
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+	
+	
+}
